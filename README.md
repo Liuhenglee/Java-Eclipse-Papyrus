@@ -30,7 +30,7 @@ SysML 的图形表示是SysML 的可视化表示，定义了九种基本图形�
 
 图形分类表示如下：
 
-![SysML图结构](D:\Documents\Desktop\Java-Eclipse-Papyrus-master\SysML图结构.png)
+![SysML图结构](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/SysML%E5%9B%BE%E7%BB%93%E6%9E%84.png)
 
 ##### 结构图：
 
