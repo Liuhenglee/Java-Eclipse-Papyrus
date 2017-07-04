@@ -42,19 +42,19 @@ SysML 的图形表示是SysML 的可视化表示，定义了九种基本图形�
 
 如下图所示，表示一个模块的各组成部分：
 
-![模块表示](D:\Documents\Desktop\模块表示.png)
+![模块表示](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%A8%A1%E5%9E%8B%E8%A1%A8%E7%A4%BA.png)
 
 属性包含行为属性和结构属性。结构属性表达了实体的结构组成该部分，而行为属性则表达了实体所具有的行为特征。结构特性包含值属性、组成属性、引用属性、约束属性、端口共 5 种类型；行为属性是对系统或结构的行为的表达，包括 操作和接收，操作表示一种调用后执行的行为，也就说操作是基于调用事件触发的。
 
 模块的属性结构如图所示：
 
-![SysML模块定义图](D:\Documents\Desktop\SysML模块定义图.png)
+![SysML模块定义图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
 
 SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为引用关联和组合关联。引用关联表示双方存在一种连接，双方可以相互访问；组合关联表达的是一种构成关系，组合段的模块实例由组成部分端的实例组合而成；泛化表达的是一种继承关系，子类型继承超类型的特性，并对超类型特性进行扩展或重定义，泛化是可传递的。依赖表述的是两个模块间一方依赖于另一方，当另一方改变时，则依赖房可能也需要改变。这也是模型间跟踪性的体现。
 
 模块间四种关系的表示形式示例如图所示：
 
-![SysML模块间关系](D:\Documents\Desktop\SysML模块间关系.png)
+![SysML模块间关系](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%A8%A1%E5%9D%97%E9%97%B4%E5%85%B3%E7%B3%BB.png)
 
 模块定义图描述了系统的结构化信息，包括系统的结构类型及关系、结构提供以及需要的服务、结构所遵循的约束、系统中的值类型。模块间的泛化关系提现了面向抽象设计的思想，方便系统的扩展。模块的结构特性“端口”体现了封装的思想，降低系统间的耦合。约束模块及约束属性描述了模块结构的约束关系，一般和参数图搭配使用，用于构建系统的数学模型。描述了结构及结构件的关系，但未给出结构间联系的内部结构，涉及了约束属性和约束模块，但精确的模型搭建还需要参数图的配合。
 
@@ -64,7 +64,7 @@ SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为
 
 类的内部模块定义可以由下图表示：
 
-![SysML内部模块定义](D:\Documents\Desktop\SysML内部模块定义.png)
+![SysML内部模块定义](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89.png)
 
 内部模块定义图包括部件、端口、接口、委托和协作：
 
@@ -86,7 +86,7 @@ SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为
 
 包图与其之间的关系表示如下：
 
-![包图](D:\Documents\Desktop\包图.png)
+![包图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E5%8C%85%E5%9B%BE.png)
 
 关系包括包与包之间关系和类与类之间的关系，包之间的关系有：
 
@@ -146,7 +146,7 @@ SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为
 
 用例图的表示形式如下，展示了一个客户退货的用例图：
 
-![SysML用例图](D:\Documents\Desktop\SysML用例图.png)
+![SysML用例图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
 
 
 
@@ -171,7 +171,7 @@ SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为
 
 一个顺序图的示例表示如下：
 
-![SysML顺序图](D:\Documents\Desktop\SysML顺序图.png)
+![SysML顺序图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E9%A1%BA%E5%BA%8F%E5%9B%BE.png)
 
 
 
@@ -185,13 +185,13 @@ SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为
 
 一个状态机图表示如下：
 
-![SysML状态机图](D:\Documents\Desktop\SysML状态机图.png)
+![SysML状态机图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE.png)
 
 状态机图中某些符号实际并不表示一种状态，其被称伪状态，是用于加强可视化表示而引入的一种图形符号。伪状态并不处理事件也不会让状态停留，初始、进入状态和退出状态都是伪状态的一种，此外还有选择、连接和终止伪状态。选择伪状态显示为菱形，有一个转移输入，两个或多个输出；连接伪状态用来将多个状态转移链接在一起，连接可以把一个输入转移分成多个输出转移来实现一个静态分支；终止伪状态指状态机生命线已经终止，表示为叉号。此外，最终状态并不是为状态的一种，其表示一个区域活动的完成。
 
 几种伪状态的符号表示如下：
 
-![状态机图伪状态](D:\Documents\Desktop\状态机图伪状态.png)
+![状态机图伪状态](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE%E4%BC%AA%E7%8A%B6%E6%80%81.png)
 
 
 
