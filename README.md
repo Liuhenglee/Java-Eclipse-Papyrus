@@ -60,7 +60,7 @@ SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为
 
 一个模块定义图的表示如下：
 
-![BDD](D:\Documents\Desktop\BDD.png)
+![BDD](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/BDD.png)
 
 
 
@@ -136,7 +136,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 一个需求图的示例如下：
 
-![SysML需求图](D:\Documents\Desktop\SysML需求图.png)
+![SysML需求图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E9%9C%80%E6%B1%82%E5%9B%BE.png)
 
 
 
@@ -162,7 +162,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 一个活动图的表示如下：
 
-![活动图](D:\Documents\Desktop\活动图.png)
+![活动图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%B4%BB%E5%8A%A8%E5%9B%BE.png)
 
 活动图有动作状态、活动状态和组合活动等表示，为了对并发的控制流建模而引入了分叉和汇合的概念，
 动作状态（action state）是原子性的动作或操作的执行状态，它不能被外部事件的转换中断。其使用平滑的圆角矩形表示，表示的动作写在矩形内部。活动状态是一个程序的执行过程的状态而不是一个普通对象的状态，活动状态是非原子性的，可以分解成其他子活动或动作状态，可以被使转换离开状态的事件从外部中断。
