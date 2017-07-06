@@ -30,7 +30,7 @@ SysML 的图形表示是SysML 的可视化表示，定义了九种基本图形�
 
 图1.1.1图形分类表示如下：
 
-![SysML图结构](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E5%9B%BE%E7%BB%93%E6%9E%84.png)
+![SysML图结构](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E5%9B%BE%E7%BB%93%E6%9E%84.png)
 
 ##### 结构图：
 
@@ -42,25 +42,25 @@ SysML 的图形表示是SysML 的可视化表示，定义了九种基本图形�
 
 如图1.1.2所示，表示一个模块的各组成部分：
 
-![模块表示](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%A8%A1%E5%9E%8B%E8%A1%A8%E7%A4%BA.png)
+![模块表示](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E6%A8%A1%E5%9E%8B%E8%A1%A8%E7%A4%BA.png)
 
 属性包含行为属性和结构属性。结构属性表达了实体的结构组成该部分，而行为属性则表达了实体所具有的行为特征。结构特性包含值属性、组成属性、引用属性、约束属性、端口共 5 种类型；行为属性是对系统或结构的行为的表达，包括 操作和接收，操作表示一种调用后执行的行为，也就说操作是基于调用事件触发的。
 
 模块的属性结构如图1.1.3所示：
 
-![SysML模块定义图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
+![SysML模块定义图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
 
 SysML模块间存在关联、泛化和依赖关系，其中关联又可以分为引用关联和组合关联。引用关联表示双方存在一种连接，双方可以相互访问；组合关联表达的是一种构成关系，组合段的模块实例由组成部分端的实例组合而成；泛化表达的是一种继承关系，子类型继承超类型的特性，并对超类型特性进行扩展或重定义，泛化是可传递的。依赖表述的是两个模块间一方依赖于另一方，当另一方改变时，则依赖房可能也需要改变。这也是模型间跟踪性的体现。
 
 模块间四种关系的表示形式示例如图1.1.4所示：
 
-![SysML模块间关系](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%A8%A1%E5%9D%97%E9%97%B4%E5%85%B3%E7%B3%BB.png)
+![SysML模块间关系](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E6%A8%A1%E5%9D%97%E9%97%B4%E5%85%B3%E7%B3%BB.png)
 
 模块定义图描述了系统的结构化信息，包括系统的结构类型及关系、结构提供以及需要的服务、结构所遵循的约束、系统中的值类型。模块间的泛化关系提现了面向抽象设计的思想，方便系统的扩展。模块的结构特性“端口”体现了封装的思想，降低系统间的耦合。约束模块及约束属性描述了模块结构的约束关系，一般和参数图搭配使用，用于构建系统的数学模型。描述了结构及结构件的关系，但未给出结构间联系的内部结构，涉及了约束属性和约束模块，但精确的模型搭建还需要参数图的配合。
 
 图1.1.5一个模块定义图的表示如下：
 
-![BDD](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/BDD.png)
+![BDD](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/BDD.png)
 
 
 
@@ -70,7 +70,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 类的内部模块定义可以由图1.1.6表示：
 
-![SysML内部模块定义](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89.png)
+![SysML内部模块定义](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89.png)
 
 内部模块定义图包括部件、端口、接口、委托和协作：
 
@@ -84,7 +84,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 图1.1.7包图与其之间的关系表示如下：
 
-![包图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E5%8C%85%E5%9B%BE.png)
+![包图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E5%8C%85%E5%9B%BE.png)
 
 关系包括包与包之间关系和类与类之间的关系，包之间的关系有：
 
@@ -136,7 +136,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 图1.1.8一个需求图的示例如下：
 
-![SysML需求图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E9%9C%80%E6%B1%82%E5%9B%BE.png)
+![SysML需求图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E9%9C%80%E6%B1%82%E5%9B%BE.png)
 
 
 
@@ -152,7 +152,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 图1.1.9用例图的表示形式如下，展示了一个客户退货的用例图：
 
-![SysML用例图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
+![SysML用例图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
 
 
 
@@ -162,7 +162,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 图1.1.10一个活动图的表示如下：
 
-![活动图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E6%B4%BB%E5%8A%A8%E5%9B%BE.png)
+![活动图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E6%B4%BB%E5%8A%A8%E5%9B%BE.png)
 
 活动图有动作状态、活动状态和组合活动等表示，为了对并发的控制流建模而引入了分叉和汇合的概念，
 动作状态（action state）是原子性的动作或操作的执行状态，它不能被外部事件的转换中断。其使用平滑的圆角矩形表示，表示的动作写在矩形内部。活动状态是一个程序的执行过程的状态而不是一个普通对象的状态，活动状态是非原子性的，可以分解成其他子活动或动作状态，可以被使转换离开状态的事件从外部中断。
@@ -181,7 +181,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 图1.1.11一个顺序图的示例表示如下：
 
-![SysML顺序图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E9%A1%BA%E5%BA%8F%E5%9B%BE.png)
+![SysML顺序图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E9%A1%BA%E5%BA%8F%E5%9B%BE.png)
 
 
 
@@ -195,13 +195,13 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 图1.1.12一个状态机图表示如下：
 
-![SysML状态机图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE.png)
+![SysML状态机图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE.png)
 
 状态机图中某些符号实际并不表示一种状态，其被称伪状态，是用于加强可视化表示而引入的一种图形符号。伪状态并不处理事件也不会让状态停留，初始、进入状态和退出状态都是伪状态的一种，此外还有选择、连接和终止伪状态。选择伪状态显示为菱形，有一个转移输入，两个或多个输出；连接伪状态用来将多个状态转移链接在一起，连接可以把一个输入转移分成多个输出转移来实现一个静态分支；终止伪状态指状态机生命线已经终止，表示为叉号。此外，最终状态并不是为状态的一种，其表示一个区域活动的完成。
 
 图1.1.13几种伪状态的符号表示如下：
 
-![状态机图伪状态](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE%E4%BC%AA%E7%8A%B6%E6%80%81.png)
+![状态机图伪状态](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE%E4%BC%AA%E7%8A%B6%E6%80%81.png)
 
 
 
@@ -211,7 +211,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 表格1.1此处我们对上文每种图可表示的元素模型建立了如下模型图表格：
 
-![模型图总结](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/%E6%A8%A1%E5%9E%8B%E5%9B%BE%E6%80%BB%E7%BB%93.png)
+![模型图总结](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/%E6%A8%A1%E5%9E%8B%E5%9B%BE%E6%80%BB%E7%BB%93.png)
 
 
 
@@ -229,13 +229,13 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.1简单对包进行了划分：
 
-![HSUV包图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E5%8C%85%E5%9B%BE.png)
+![HSUV包图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%8C%85%E5%9B%BE.png)
 
 解释：HSUVModel是一个代表用户模型的包，SysML概要文件必须应用到这个包中，以便包含来自概要文件的构造型。HSUVModel可能还需要模型库，比如SI单元类型模型，模型库必须按照指定的方式导入到用户模型中。由此建立的SysML包与其他包的关系为严格的应用关系，HSUVModel用户模型与SI单元模型库的关系为导入关系。
 
 示例图1.2.2详细说明了这个示例问题中使用的HSUVModel用户模型包的单元结构：
 
-![HSUV包图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E5%8C%85%E5%9B%BE2.png)
+![HSUV包图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%8C%85%E5%9B%BE2.png)
 
 在用户模型包中包含各个模型元素，图中显示了包或模型元素之间的关系，显示用于评估样例问题的模型的结构。视图模型View不包含自己的模型元素，并且对其他包中的模型的更改会在操作和性能视图中自动更新。
 
@@ -249,7 +249,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.3使用用户定义的上下文图建立混合SUV系统的上下文：
 
-![HSUV内部框图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E5%86%85%E9%83%A8%E6%A1%86%E5%9B%BE.png)
+![HSUV内部框图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%86%85%E9%83%A8%E6%A1%86%E5%9B%BE.png)
 
 此处内部模块定义图以HyperSUV为中心，定义了与驾驶人员、维护人员以及乘客之间的关系，同时定义了外部Baggage行李和Environment驾驶环境的附加上下文，驾驶环境中提出了Weather天气、Road道路以及ExternalObject外部对象等关键元素。
 
@@ -261,13 +261,13 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.4描述了SUV和主要参与者之间建立的用例场景：
 
-![HSUV用例图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
+![HSUV用例图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
 
 用例图“HyperSUV”描述了驱动车辆使用的车辆系统。主体混合动力SUV和参与者(驾驶员、注册所有者、维护人员、保险公司、DMV)相互作用以实现用例。用例主体中包含Operate操作用例、Insure保险用例、Register注册用例和Maintain维护用例，驾驶人员仅与操作用例进行交互，维护人员只需考虑对车辆的维护，注册所有者则需要对车辆进行注册与投保。
 
 示例图1.2.5主要描述驱动程序建立的SUV用例：
 
-![HSUV用例图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E7%94%A8%E4%BE%8B%E5%9B%BE2.png)
+![HSUV用例图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E7%94%A8%E4%BE%8B%E5%9B%BE2.png)
 
 驱动人员面对的用例场景主要有驾驶和驻车两种状态的用例，然后对两种用例进行扩充新增车辆启动、加速、控制引导和刹车用例等车辆主要操作，车辆启动是驾驶的扩展用例，加速、控制引导和刹车是驾驶和停车的包含用例。此用例图详细描述了车辆驱动人员的具体负责事项。
 
@@ -278,7 +278,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 (1) 驱动黑盒序列图：
 示例图1.2.6显示了驱动车辆用例所必需的驱动程序和车辆之间的交互：
 
-![HSUV序列图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE.png)
+![HSUV序列图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE.png)
 
 这张图代表了DriveBlackBox驱动黑盒的交互，它是由汽车领域的块所拥有的。黑盒用于本例的目的，是指主题系统HSUV块与外部元素交互的方式，而不显示任何内部细节。在高控速alt controlSpeed部分中，每个选项的条件都用操作控制语言OCL表示，并与HSUV块的状态相关。
 
@@ -289,7 +289,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 (2) 状态机图-HSUV操作状态
 示例图1.2.7通过一个名为“HSUVoperationalstate”作业状态的状态机描述了HSUV块的操作状态：
 
-![HSUV状态图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/SysML%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE.png)
+![HSUV状态图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/SysML%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE.png)
 
 图中将作业状态划分为Oprate操作状态和Off关停状态，关停状态的车辆经过Start启动事件触发进入操作状态，操作状态车辆经过Shutoff熄火重新回到关停状态；操作状态中首先进入的是Idel闲置状态，闲置状态经加速事件触法进入巡航状态，巡航状态经制动后转为刹车状态，刹车状态经过停车触发转换为闲置状态。
 
@@ -301,13 +301,13 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.8显示了一个黑盒交互，作为示例图1.2.6车辆启动的部分详细划分：
 
-![HSUV序列图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE2.png)
+![HSUV序列图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE2.png)
 
 车辆启动由驾驶员发出Turn ignition点火消息对车辆启动白盒进行激活。启动载体的黑盒交互，引用了车辆启动白盒交互序列图1.2.9，它将分解HSUV块上下文中的生命线。
 
 ##### 图1.2.9中的生命线需要来自Power系统分解,启动载体的白盒交互序列图。现在开始考虑在混合动力suv中包含的部件:
 
-![HSUV序列图3](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE3.png)
+![HSUV序列图3](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE3.png)
 
 车辆启动白盒划分为PowerControl动力控制单元和Electrical电动控制单元，点火消息传递给白盒后，首先激活动力控制单元，然后再发送使能信号激活电动控制单元，电动控制单元准备完成后返回就绪消息。
 
@@ -319,7 +319,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.9将需求层次划分为了三层：
 
-![HSUV需求图](D:\Documents\jep\images\HSUV需求图.png)
+![HSUV需求图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E9%9C%80%E6%B1%82%E5%9B%BE.png)
 
 车辆系统规范包含许多基于文本的需求。图中突出了一些需求，包括车辆通过排放标准的要求，为了便于说明，该标准被扩展了。出于本例的目的，容器的交叉毛发关系指的是将复杂的需求分解为更简单的单一需求的实践。
 
@@ -327,7 +327,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.10派生需求图,显示了一组需求是从最低层HSUV规范中的要求：
 
-![HSUV需求图2](D:\Documents\jep\images\HSUV需求图2.png)
+![HSUV需求图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E9%9C%80%E6%B1%82%E5%9B%BE2.png)
 
 为了这个例子的目的，派生的需求在hsuv规约中表达了需求的概念，并将它们与HSUV系统联系起来。
 
@@ -341,7 +341,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.11汽车领域模块定义图提供了先前在环境图中所示的概念的定义：
 
-![HSUV模块定义图](D:\Documents\jep\images\HSUV模块定义图.png)
+![HSUV模块定义图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
 
 交互驱动的驱动程序和start驱车blackbox(在第4.3节中描述了“详细说明行为(序列和状态机图)”，“在第7页”被描述为汽车域块所拥有的。
 
@@ -349,7 +349,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 
 示例图1.2.12定义了混合动力suv块的组件：
 
-![HSUV模块定义图2](D:\Documents\jep\images\HSUV模块定义图2.png)
+![HSUV模块定义图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE2.png)
 
 如图所示，brake踏板和轮子-hubassmbly被使用，但不包含在power子系统块中。
 
@@ -358,13 +358,13 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 (3)内部模块定义图-混合动力SUV
 示例图1.2.13定义了混合动力SUV的内部结构，显示了顶级模型元素是如何在混合dsuv块中连接在一起的：
 
-![HSUV内部模块定义图](D:\Documents\jep\images\HSUV内部模块定义图.png)
+![HSUV内部模块定义图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
 
 
 
 示例图1.2.14定义了电力子系统的内部结构，显示了power子系统块的各个部分是如何被使用的：
 
-![HSUV内部模块定义图2](D:\Documents\jep\images\HSUV内部模块定义图2.png)
+![HSUV内部模块定义图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE2.png)
 
 它显示了“连接器”在各个部分之间，客户端服务器端口、流端口、atomicflow端口和itemflow。在前轮和brake踏板上的虚线标志着图16和图18中描述的“使用-非组合”关系。燃料棒的边界是一个商店，它可以跟踪燃料的数量和燃料量。图18中也描述了这一点。
 
@@ -376,13 +376,13 @@ IBD的元素类型包括外部角色、模块、端口和连接器，模块用�
 示例图1.2.15定义了燃料流约束的参数图，显示了燃料的流量与燃料需求和燃料压力值的关系：
 图24是一个参数图，显示了燃料的流量与燃料需求和燃料压力值的关系。
 
-![HSUV参数图](D:\Documents\jep\images\HSUV参数图.png)
+![HSUV参数图](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%8F%82%E6%95%B0%E5%9B%BE.png)
 
 
 
 示例图1.2.16定义了有效性和关键关系的度量的参数关系图：
 
-![HSUV参数图2](D:\Documents\jep\images\HSUV参数图2.png)
+![HSUV参数图2](https://github.com/Liuhenglee/Java-Eclipse-Papyrus/blob/master/images_chap1/HSUV%E5%8F%82%E6%95%B0%E5%9B%BE2.png)
 
 衡量有效性的标准是用户定义的原型。图28显示了HSUV的整体成本效益如何评估。它展示了针对HSUV设计的一种特定替代方案的有效性的具体措施，并可被重用来评估其他替代方案。
 
