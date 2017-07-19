@@ -30,7 +30,7 @@ SysML 的图形表示是SysML 的可视化表示，定义了九种基本图形�
 
 图1.1.1图形分类表示如下：
 
-![SysML图结构](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E5%9B%BE%E7%BB%93%E6%9E%84.png)
+![SysML图结构](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20figure%20structure.png)
 
 ##### 结构图：
 
@@ -42,19 +42,19 @@ SysML 的图形表示是SysML 的可视化表示，定义了九种基本图形�
 
 如图1.1.2所示，表示一个模块的各组成部分：
 
-![模块表示](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E6%A8%A1%E5%9E%8B%E8%A1%A8%E7%A4%BA.png)
+![模块表示](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20model%20represents.png)
 
 属性包含行为属性和结构属性。结构属性表达了实体的结构组成该部分，而行为属性则表达了实体所具有的行为特征。结构特性包含值属性、组成属性、引用属性、约束属性、端口共 5 种类型，端口类型具有标准端口(提供接口+请求接口)和流端口(非原子流端口、原子流端口)；行为属性是对系统或结构的行为的表达，包括 操作和接收，操作表示一种调用时执行的行为，也就说操作是基于调用事件触发的，接收是在模块被信号触发后需要执行的行为，是由信号事件触发的。
 
 模块的属性结构如图1.1.3所示：
 
-![SysML模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
+![SysML模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20model%20represents.png)
 
 SysML模块间存在关联、泛化和依赖关系。关联是对元素的定义，其可以分为引用关联和组合关联，引用关联表示双方存在一种连接，双方可以相互访问；组合关联表达的是一种构成关系，组合段的模块实例由组成部分端的实例组合而成。泛化表达的是一种继承关系，子类型继承超类型的特性，并对超类型特性进行扩展或重定义，泛化是可传递的。依赖表述的是两个模块间一方依赖于另一方，当另一方改变时，则依赖方可能也需要改变。这也是模型间跟踪性的体现。
 
 模块间四种关系的表示形式示例如图1.1.4所示：
 
-![SysML模块间关系](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E6%A8%A1%E5%9D%97%E9%97%B4%E5%85%B3%E7%B3%BB.png)
+![SysML模块间关系](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20module%20relationships.png)
 
 模块定义图描述了系统的结构化信息，包括系统的结构类型及关系、结构提供以及需要的服务、结构所遵循的约束、系统中的值类型。模块间的泛化关系提现了面向抽象设计的思想，方便系统的扩展；模块的结构特性“端口”体现了封装的思想，降低系统间的耦合；约束模块及约束属性描述了模块结构的约束关系，一般和参数图搭配使用，用于构建系统的数学模型。
 
@@ -62,7 +62,7 @@ SysML模块间存在关联、泛化和依赖关系。关联是对元素的定义
 
 图1.1.5一个模块定义图的表示如下：
 
-![BDD](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/BDD.png)
+![SysML BDD](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20module%20definition%20diagram2.png)
 
 
 
@@ -74,7 +74,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器：外部实�
 
 类的内部模块定义可以由图1.1.6表示：
 
-![SysML内部模块定义](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89.png)
+![SysML内部模块定义](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20internal%20module%20definition.png)
 
 内部模块定义图还能够显示内嵌于属性中的其他属性，可以在此一视图之中展示系统层级的多个层级。当需要为内嵌属性添加连接器时，可以选择跨越封装内嵌属性的边界绘制连接器，也可在内嵌属性边界的端口处绘制连接器。SysML没有限制在图中对内嵌属性的层数，但属性中的内嵌属性会占据很大的空间，这可能会降低图的可读性。
 
@@ -88,7 +88,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器：外部实�
 
 图1.1.7包图与其之间的关系表示如下：
 
-![包图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E5%8C%85%E5%9B%BE.png)
+![包图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20package%20diagram.png)
 
 关系包括包与包之间关系和类与类之间的关系，包之间的常用关系有：合并 merge，表示为一条虚线+单向空心箭头+书名号包含的merge字样, 箭头指向被合并的包；导入import, 表示为一条虚线+单向空心箭头+书名号包含的import/access字样, 箭头指向被合并的包；嵌套 nesting ，表示为一条实线+带十字线的实心圆, 圆远离被合并的包。
 
@@ -108,7 +108,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器：外部实�
 
 图1.1.8展示了一个大炮开火范围的参数图：
 
-![SysML参数图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E5%8F%82%E6%95%B0%E5%9B%BE.png)
+![SysML参数图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20parametric%20graph.png)
 
 参数图主要用于：显示不同约束表达式中约束参数之间的绑定关系，以创建等式或不等式的复合系统；显示约束参数和值属性之间的绑定关系，以向模块应用约束表达式。但并非所有的模型都需要建立参数模型，它需要系统模型高度精确，这会增加成本。
 
@@ -126,7 +126,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器：外部实�
 
 图1.1.9一个需求图的示例如下：
 
-![SysML需求图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E9%9C%80%E6%B1%82%E5%9B%BE.png)
+![SysML需求图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20demand%20figure.png)
 
 
 
@@ -142,7 +142,7 @@ IBD的元素类型包括外部角色、模块、端口和连接器：外部实�
 
 图1.1.10用例图的表示形式如下，展示了一个客户退货的用例图：
 
-![SysML用例图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
+![SysML用例图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20use%20case%20diagram.png)
 
 用例图是一种黑盒视图，它代表的是系统服务的提供，以及需要那些服务并在触发之后参与到执行过程中的执行者。注意用例图中避免出现以下的的非法事物：执行者与用例之间复合关联；执行者之间任何类型的关联；两个用例之间的关联。
 
@@ -160,7 +160,7 @@ SysML活动图对UML活动图进行了扩展，包括把控制作为数据、表
 
 图1.1.11一个活动图的表示如下：
 
-![活动图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E6%B4%BB%E5%8A%A8%E5%9B%BE.png)
+![活动图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20activity%20diagram.png)
 
 活动图也可分为动作状态、活动状态和组合活动等表示：
 动作状态action state是原子性的动作或操作的执行状态，它不能被外部事件的转换中断。其使用平滑的圆角矩形表示，表示的动作写在矩形内部。活动状态是一个程序的执行过程的状态而不是一个普通对象的状态，活动状态是非原子性的，可以分解成其他子活动或动作状态，可以被使转换离开状态的事件从外部中断。
@@ -181,7 +181,7 @@ SysML活动图对UML活动图进行了扩展，包括把控制作为数据、表
 
 图1.1.12一个顺序图的示例表示如下：
 
-![SysML顺序图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E9%A1%BA%E5%BA%8F%E5%9B%BE.png)
+![SysML顺序图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20sequence%20diagram.png)
 
 组合片段是一种机制，用于向交互添加控制逻辑，由一个放在一个或多个生命线之上的矩形标示，并对其中的消息进行封装。控制逻辑类型由交互操作符来指定，SysML定义了是一种交互操作符，常用类型为opt,alt,loop和par：opt表示一系列可选的事件，守卫guard布尔表达式放置于组合片段的顶部第一个事件发生的生命线上，如果条件为真则组合片段在执行过程中发生；alt表示两个或多个可替换的系列事件，其有多个操作区域，每个操作区域都有自己的守卫，同一时间只有一个守卫为真；loop表示一次执行可发生多次的交互，交互操作符中还需指定迭代次数的范围；par表示两个或者多个可并行执行的事件。
 
@@ -199,13 +199,13 @@ SysML活动图对UML活动图进行了扩展，包括把控制作为数据、表
 
 图1.1.13一个状态机图表示如下：
 
-![SysML状态机图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE.png)
+![SysML状态机图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20state%20machine%20diagram.png)
 
 状态机图中某些符号实际并不表示一种状态，其被称伪状态，是用于加强可视化表示而引入的一种图形符号。伪状态并不处理事件也不会让状态停留，初始、进入状态和退出状态都是伪状态的一种，此外还有选择、连接和终止伪状态。选择伪状态显示为菱形，有一个转移输入，两个或多个输出；连接伪状态用来将多个状态转移链接在一起，连接可以把一个输入转移分成多个输出转移来实现一个静态分支；终止伪状态指状态机生命线已经终止，表示为叉号。此外，最终状态并不是为状态的一种，其表示一个区域活动的完成。
 
 图1.1.14几种伪状态的符号表示如下：
 
-![状态机图伪状态](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/%E7%8A%B6%E6%80%81%E6%9C%BA%E5%9B%BE%E4%BC%AA%E7%8A%B6%E6%80%81.png)
+![状态机图伪状态](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/SysML%20pseudo%20state.png)
 
 状态机也可以表示并发行为，通过向状态机添加多个区域实现，系统操作的任意时刻每个区域都必须有一个活动状态。
 
@@ -222,31 +222,31 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 
 表格1.1此处我们对上文每种图可表示的元素模型建立了如下模型图表格：
 
-![模型图总结](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/%E6%A8%A1%E5%9E%8B%E5%9B%BE%E6%80%BB%E7%BB%93.png)
+![模型图总结](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/Summary%20of%20model%20drawing.png)
 
 
 
 #### 举例一个完整例子串联各种类图
 
-第二小节参考OMG官方介绍文档3，以混合动力SUV为例进行解释，描述SysML的使用。对于SysML如何支持使用系统的规范、分析和设计，本例展示了语言的一些基本特征，并为每个SysML图类型提供至少一个图表。
+第二小节参考OMG官方介绍文档3，以混合动力SUV为例进行解释，描述SysML的使用，主要展示运用SysML构思建立的一个问题的各类图。对于SysML如何支持使用系统的规范、分析和设计，本例展示了语言的一些基本特征，并为每个SysML图类型提供至少一个图表。
 
 本例选择简化问题的片断来说明如何应用图表，并展示了一些可能的相互关系，所以此小节的结构是在如何在这个示例问题上使用它的上下文中显示每个图。具体问题内容如下：
 
 电动运动型多用途车SUV有内在冲突的需求，即对燃油效率的渴望，同时也期望大型货物承载能力和越野能力。我们把这些需求划分为操作需求、性能需求、质量需求和容量需求以建立约束关系，同时需要考虑SUV与驾乘人员以及维护人员等主要参与者之间的关系。本例具体关注于设计决策围绕混合动力SUV的动力子系统、需求、性能分析、结构和行为，而技术的准确性和实际解决方案的可行性并不是优先考虑的问题，具体模型图的建立和解释如下。
 
-##### 第一部分显示SysML图，因为它们可能用于建立系统上下文，建立系统边界以及顶层用例，此步骤主要需要建立包图、内部框图和用例图；
+##### 第一部分显示SysML图因为它们可能用于建立系统上下文，建立系统边界以及顶层用例，此步骤主要需要建立包图、内部框图和用例图；
 
 (1) 包图的简要和具体的各层绘制
 
 示例图1.2.1简单对包进行了划分：
 
-![HSUV包图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%8C%85%E5%9B%BE.png)
+![HSUV包图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20package%20diagram.png)
 
 解释：HSUVModel是一个代表用户模型的包，SysML概要文件必须应用到这个包中，以便包含来自概要文件的构造型。HSUVModel可能还需要模型库，比如SI单元类型模型，模型库必须按照指定的方式导入到用户模型中。由此建立的SysML包与其他包的关系为严格的应用关系，HSUVModel用户模型与SI单元模型库的关系为导入关系。
 
 示例图1.2.2详细说明了这个示例问题中使用的HSUVModel用户模型包的单元结构：
 
-![HSUV包图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%8C%85%E5%9B%BE2.png)
+![HSUV包图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20package%20diagram2.png)
 
 在用户模型包中包含各个模型元素，图中显示了包或模型元素之间的关系，显示用于评估样例问题的模型的结构。视图模型View不包含自己的模型元素，并且对其他包中的模型的更改会在操作和性能视图中自动更新。
 
@@ -260,7 +260,7 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 
 示例图1.2.3使用用户定义的上下文图建立混合SUV系统的上下文：
 
-![HSUV内部框图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%86%85%E9%83%A8%E6%A1%86%E5%9B%BE.png)
+![HSUV内部框图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20internal%20block%20diagram.png)
 
 此处内部模块定义图以HyperSUV为中心，定义了与驾驶人员、维护人员以及乘客之间的关系，同时定义了外部Baggage行李和Environment驾驶环境的附加上下文，驾驶环境中提出了Weather天气、Road道路以及ExternalObject外部对象等关键元素。
 
@@ -272,13 +272,13 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 
 示例图1.2.4描述了SUV和主要参与者之间建立的用例场景：
 
-![HSUV用例图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
+![HSUV用例图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20use%20case%20diagram.png)
 
 用例图“HyperSUV”描述了驱动车辆使用的车辆系统。主体混合动力SUV和参与者(驾驶员、注册所有者、维护人员、保险公司、DMV)相互作用以实现用例。用例主体中包含Operate操作用例、Insure保险用例、Register注册用例和Maintain维护用例，驾驶人员仅与操作用例进行交互，维护人员只需考虑对车辆的维护，注册所有者则需要对车辆进行注册与投保。
 
 示例图1.2.5主要描述驱动程序建立的SUV用例：
 
-![HSUV用例图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E7%94%A8%E4%BE%8B%E5%9B%BE2.png)
+![HSUV用例图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20use%20case%20diagram2.png)
 
 驱动人员面对的用例场景主要有驾驶和驻车两种状态的用例，然后对两种用例进行扩充新增车辆启动、加速、控制引导和刹车用例等车辆主要操作，车辆启动是驾驶的扩展用例，加速、控制引导和刹车是驾驶和停车的包含用例。此用例图详细描述了车辆驱动人员的具体负责事项。
 
@@ -289,7 +289,7 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 (1) 驱动黑盒序列图
 示例图1.2.6显示了驱动车辆用例所必需的驱动程序和车辆之间的交互：
 
-![HSUV序列图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE.png)
+![HSUV序列图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20sequence%20diagram.png)
 
 这张图代表了DriveBlackBox驱动黑盒的交互，它是由汽车领域的块所拥有的。黑盒用于本例的目的，是指主题系统HSUV块与外部元素交互的方式，而不显示任何内部细节。在高控速alt controlSpeed部分中，每个选项的条件都用操作控制语言OCL表示，并与HSUV块的状态相关。
 
@@ -300,7 +300,7 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 (2) HSUV操作状态机图
 示例图1.2.7通过一个名为“HSUVoperationalstate”作业状态的状态机描述了HSUV块的操作状态：
 
-![HSUV状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E7%8A%B6%E6%80%81%E5%9B%BE.png)
+![HSUV状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20state%20diagram.png)
 
 图中将作业状态划分为Oprate操作状态和Off关停状态，关停状态的车辆经过Start启动事件触发进入操作状态，操作状态车辆经过Shutoff熄火重新回到关停状态；操作状态中首先进入的是Idel闲置状态，闲置状态经加速事件触法进入巡航状态，巡航状态经制动后转为刹车状态，刹车状态经过停车触发转换为闲置状态。
 
@@ -312,13 +312,13 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 
 示例图1.2.8显示了一个黑盒交互，作为示例图1.2.6车辆启动的部分详细划分：
 
-![HSUV序列图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE2.png)
+![HSUV序列图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20sequence%20diagram2.png)
 
 车辆启动由驾驶员发出Turn ignition点火消息对车辆启动白盒进行激活。启动载体的黑盒交互，引用了车辆启动白盒交互序列图1.2.9，它将分解HSUV块上下文中的生命线。
 
 图1.2.9中的生命线需要来自Power系统分解,启动载体的白盒交互序列图。现在开始考虑在混合动力suv中包含的部件:
 
-![HSUV序列图3](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%BA%8F%E5%88%97%E5%9B%BE3.png)
+![HSUV序列图3](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20sequence%20diagram3.png)
 
 车辆启动白盒划分为PowerControl动力控制单元和Electrical电动控制单元，点火消息传递给白盒后，首先激活动力控制单元，然后再发送使能信号激活电动控制单元，电动控制单元准备完成后返回就绪消息。
 
@@ -330,7 +330,7 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 
 示例图1.2.9将需求层次划分为了三层：
 
-![HSUV需求图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E9%9C%80%E6%B1%82%E5%9B%BE.png)
+![HSUV需求图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20demand%20figure.png)
 
 最顶层为车辆系统规范，其中包含许多基于文本的需求。图中突出了一些需求，包括车辆通过排放标准的要求，为了便于说明，该标准被扩展了。
 
@@ -342,7 +342,7 @@ SysML 能对系统工程的各种问题进行建模，适用于系统工程的�
 
 示例图1.2.10派生需求图,显示了一组需求是从最低层HSUV规范中的要求：
 
-![HSUV需求图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E9%9C%80%E6%B1%82%E5%9B%BE2.png)
+![HSUV需求图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20demand%20figure2.png)
 
 从最低层次的需求层次结构中建立派生需求和基本原理，派生的需求在HSUV规约中表达了需求的概念，并将它们与HSUV系统联系起来。Power能源要求与越野、加速和载货需求建立请求关系，其他的还有二次制动和续航里程需求。
 
@@ -354,7 +354,7 @@ PSM电源管理需求直接与油耗与动力要求建立请求关系，为了�
 
 示例图1.2.11汽车领域模块定义图提供了先前在环境图中所示的概念的定义：
 
-![HSUV模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
+![HSUV模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20module%20definition%20diagram.png)
 
 AutomotiveDoamin汽车动力领域所拥有的交互驱动黑盒与驱车黑盒在第二部分中描述了详细说明行为(序列和状态机图)。此处再次对之前的IBD做了BDD解释，将汽车领域向下划分为HSUV系统、外部行李、外部环境元素，环境元素中依旧包括天气、外部对象和道路等元素。
 
@@ -362,7 +362,7 @@ AutomotiveDoamin汽车动力领域所拥有的交互驱动黑盒与驱车黑盒�
 
 示例图1.2.12定义了混合动力suv块的组件：
 
-![HSUV模块定义图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE2.png)
+![HSUV模块定义图3](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20internal%20block%20diagram3.png)
 
 如图所示，HSUV块中包含动力、制动、形体、内部、照明和底盘子系统块，刹车踏板和轮毂集成被定义使用，并包含在动力子系统块中。
 
@@ -371,7 +371,7 @@ AutomotiveDoamin汽车动力领域所拥有的交互驱动黑盒与驱车黑盒�
 (3)混合动力SUV内部模块定义图
 示例图1.2.13定义了混合动力SUV的内部结构，显示了顶级模型元素是如何在HSUV块中连接在一起的：
 
-![HSUV内部模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
+![HSUV内部模块定义图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20internal%20block%20diagram2.png)
 
 HSUV块中主要包含图1.2.12中定义的子系统，此图中再定义了各子系统之间的关系。
 
@@ -379,7 +379,7 @@ HSUV块中主要包含图1.2.12中定义的子系统，此图中再定义了各�
 
 示例图1.2.14定义了电力子系统的内部结构，显示了动力子系统块的各个部分是如何被使用的：
 
-![HSUV内部模块定义图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%86%85%E9%83%A8%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE2.png)
+![HSUV内部模块定义图3](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20internal%20block%20diagram3.png)
 
 它显示了在各个部分之间建立的连接，包括客户端服务器端口、流端口、原子流端口和项目流等。前轮和刹车踏板与其他元素之间建立了共享聚合关系，边界虚线表示燃料的存储，它可以跟踪燃料的消耗量和存储量。
 
@@ -390,7 +390,7 @@ HSUV块中主要包含图1.2.12中定义的子系统，此图中再定义了各�
 (1) 燃料流量参数图
 示例图1.2.15定义了燃料流约束的参数图，显示了燃料的流量与燃料需求和燃料压力值的关系：
 
-![HSUV参数图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%8F%82%E6%95%B0%E5%9B%BE.png)
+![HSUV参数图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20parameters%20figure.png)
 
 参数图显示了燃料流量、燃料需求和燃料压力值之间的关系，即燃料的流量与燃料的需求、压力和流率的参数约束与燃料流量有着实值属性的绑定。
 
@@ -398,7 +398,7 @@ HSUV块中主要包含图1.2.12中定义的子系统，此图中再定义了各�
 
 示例图1.2.16定义了有效性和关键关系的度量的参数关系图：
 
-![HSUV参数图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%E5%8F%82%E6%95%B0%E5%9B%BE2.png)
+![HSUV参数图2](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap1/HSUV%20parameters%20figure.png)
 
 最大加速度分析与通过指定路程的计时有着值的关联，经济油耗量、载货量和单位成本有着各自的值约束关系用于建立方程计算，这些所有计算关系的目标函数总合即是HSUV的成本效率的计算式。
 
@@ -434,13 +434,13 @@ Papyrus是基于Eclipse公共许可提供的免费建模工具，可以对 C++�
 
 建立用例图CruiseSystemCase，绘制以下关系：
 
-![Cruise用例图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%E7%94%A8%E4%BE%8B%E5%9B%BE.png)
+![Cruise用例图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%20use%20case%20diagram.png)
 
 在ICCS巡航场景主题下，自动巡航系统是直接和参与者交互的系统，其需要定速巡航和防撞预警子系统协同工作来完成，防撞预警系统具有传感器和碰撞预警两个组件，碰撞预警仅当有碰撞可能时才触发，基础巡航系统具有传感器、巡航控制和驾驶操纵三个组件，三个组件需要彼此配合完成工作。
 
 依照自动巡航系统的速度要求和传感器可靠性要求绘制的需求图RequirementDiagram如下：
 
-![Cruise需求图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%E9%9C%80%E6%B1%82%E5%9B%BE.png)
+![Cruise需求图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%20demand%20figure.png)
 
 对自动巡航系统包的需求可具体分解为对巡航速度、安全距离、响应时间和风险控制的需求。巡航速度又可分解为巡航速度范围的需求和错误速度纠正的需求；响应时间对巡航速度响应时间、碰撞警告时间事件和车距测量时间等提出了需求；误差控制主要体现在速度测量误差和距离测量误差两方面。在第三层的需求中，合理速度范围设定、传感器灵敏度、传感器可靠性、碰撞处理时间和风险评估速度作为工程中需要满足的需求继承了以上两层需求的主要考量。
 
@@ -454,7 +454,7 @@ COP设计阶段主要分析车辆信息系统的基本功能和工作模式，�
 
 建立活动图CruiseBlackBoxView，描述的活动如下：
 
-![Cruise状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%E7%8A%B6%E6%80%81%E5%9B%BE.png)
+![Cruise状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%20state%20diagram.png)
 
 驾驶员在驾驶期间启动智能巡航并且输入巡航速度即可触发系统工作，系统实时测量车速和前车车距，计算出与前车碰撞的预计时间，如果时间小于10秒就触发风险计算，如果有碰撞危险就发出警告并降低车速；如果碰撞时间超过十秒系统就保持匀速行驶。匀速巡航时如果驾驶员按下巡航按钮、踩下油门或者刹车可终止智能巡航。
 
@@ -466,7 +466,7 @@ COP设计阶段完成后，TLD设计阶段主要分析明确信息系统的架�
 
 建立模块定义图CruiseSystemBDD如下：
 
-![Cruise模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
+![Cruise模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%20module%20definition%20diagram.png)
 
 模块定义图主要体现了智能巡航系统的主要结构特征，主要划分为操纵模块、控制模块、传感器和预警模块。操纵模块主要用于侦听用户的巡航请求，然后向控制模块进行传达，主要功能有启动巡航、终止巡航和设定巡航速度；控制模块是系统的核心，处理巡航请求、速度设定与控制、碰撞时间的计算和碰撞风险的评估等主要功能；传感器主要测量与前车的距离、实时车速和踏板状态等数据；预警模块会在巡航模式启动和关闭时给出提示，在具有碰撞风险时给出警示。
 
@@ -474,7 +474,7 @@ COP设计阶段完成后，TLD设计阶段主要分析明确信息系统的架�
 
 绘制的时序图CruiseSystemSequenceD如下：
 
-![Cruise顺序图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%E9%A1%BA%E5%BA%8F%E5%9B%BE.png)
+![Cruise顺序图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%20sequence%20diagram.png)
 
 由于papyrus的顺序图绘制开发不完善，绘制过程中多次错误导致试图混乱和失去响应，本项目中并未能绘制出时序图所有的元素，具体可参照文档12。
 
@@ -482,7 +482,7 @@ COP设计阶段完成后，TLD设计阶段主要分析明确信息系统的架�
 
 绘制的参数图ParametricDiagram如下：
 
-![Cruise参数图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%E5%8F%82%E6%95%B0%E5%9B%BE.png)
+![Cruise参数图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Cruise%20parameters%20figure.png)
 
 参数图中主要表达如下信息：传感器获取的车速信号与车距信号被碰撞时间计算程序所调用，生成碰撞预测时间，碰撞预测时间与前车的相关数据经过风险测算程序可计算出碰撞风险，并且生成警示请求，碰撞风险和碰撞预测时间决定了巡航模式的切换。
 
@@ -504,11 +504,11 @@ ICD设计阶段主要是在确定系统功能和架构的基础上明确各部�
 
 ##### (1)模块定义图绘制
 
-绘制模块定义图Increment class diagram：实现自增操作只需在类中定义一个整形计数参数和一个用于实现自增的方法。创建公有Increment块，属性勾选active；添加属性counter，数据类型为Integer整形，属性勾选unique；添加操作increment，其方法为IncrementMethord。
+绘制模块定义图Increment class diagram：实现自增操作只需在类中定义一个整形计数参数和一个用于实现自增的方法。创建公有Increment块，属性勾选active；添加内容counter，数据类型为Integer整形，属性勾选unique多重性为1；添加公有操作increment，关联其方法为IncrementMethod，没有参数Owned prameter。
 
 建立的模块定义图如下：
 
-![Increment模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%E6%A8%A1%E5%9D%97%E5%AE%9A%E4%B9%89%E5%9B%BE.png)
+![Increment模块定义图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%20module%20defines%20the%20diagram.png)
 
 
 
@@ -520,13 +520,13 @@ ICD设计阶段主要是在确定系统功能和架构的基础上明确各部�
 
 自增行为活动图IncrementClassifierBehavior如下：
 
-![Increment自增行为状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%E8%87%AA%E5%A2%9E%E8%A1%8C%E4%B8%BA%E7%8A%B6%E6%80%81%E5%9B%BE.png)
+![Increment自增行为状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%20state%20diagram%20of%20behavior.png)
 
 随后计数器对象进入到IncrementMethod自增方法中进行每一次赋值的操作，自增方法图主要描述incremen方法每一次执行的过程，首先由This自读取活动读取出此次调用对象，通过分支节点分为对象和计数值两路。通过上方对象流到达SetCounter的对象则等待下一次的赋值；通过下方对象流到达readcounter"结构特征读取活动"读取出result即为当前的counter计数值，其与1值说明活动通过add行为调用活动实现了counter++的操作，操作后的result进入SetCounter活动赋给计数值对象后即完成了一次方法的调用。
 
 自增方法活动图IncrementMethod如下：
 
-![Increment自增方法状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%E8%87%AA%E5%A2%9E%E6%96%B9%E6%B3%95%E7%8A%B6%E6%80%81%E5%9B%BE.png)
+![Increment自增方法状态图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%20state%20diagram%20of%20the%20method.png)
 
 
 
@@ -534,43 +534,49 @@ ICD设计阶段主要是在确定系统功能和架构的基础上明确各部�
 
 在定义完成的活动块Increment上选中Moka生成Factory要素，块中将生成新的<<Create>>increment方法和Increment_Factory行为图用于执行仿真实验。此时需要保存模型，新生成工厂活动将在下一个步骤中使用，以实际启动该模型的执行。
 
-![Moka启动](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Moka%E5%90%AF%E5%8A%A8.png)
+![Moka启动](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Moka%20start.png)
 
 生成工厂活动后的块由以下文件组成，如有文件缺少仿真将无法执行，需要重新检查模型建立过程中的错误。
 
-![Increment可执行块结构](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/images_chap2/Increment%E5%8F%AF%E6%89%A7%E8%A1%8C%E5%9D%97%E7%BB%93%E6%9E%84.png)
+![Increment可执行块结构](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%20executable%20block%20structure.png)
 
 Moka与Eclipse调试框架集成在一起。这意味着，为了启动一个执行，必须定义启动配置。可以通过单击Eclipse工具栏上的“Debug”工具来创建启动配置，然后按下调试配置。在Moka加载配置中新建一项，Model选中模型文件夹下的.uml文件，可执行元素选择生成的Factory工厂活动，执行引擎根据需要进行调整，可选择org.eclipse.papyrus.moka.composites，然后应用点击调试即可。
 
-![Moka调试配置](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Moka%E8%B0%83%E8%AF%95%E9%85%8D%E7%BD%AE.png)
+![Moka调试配置](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Moka%20debug%20configuration.png)
 
-执行后的自增计数器中的counter计数值可在Debug变量窗口中进行观察。
+执行后的自增计数器中的counter计数值可在Debug变量窗口中进行观察。Moka在调试过程中会以动态流的形式在各个图中流动，其代表正在经过的元素，方便调试时的观察，在右下角Animate中可以调整一次动画的延迟时间，改变运行的速率。
+
+Moka中调试Increment结果验证过程如下：
+
+![Increment result validation](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Increment%20result%20validation.png)
+
+在read counter出设置一个断点，第一次读取时counter为初始值0，继续运行至第二次到达断点，此时counter的值更改为1。以此类推，counter在每次执行过程中均执行了自增操作，模型建立正确达到预期要求。
 
 
 
 ##### (4)总结
 
-建立模型的仿真实验执行需要依靠于详细的模块定义图和活动图绘制，还可建立参数图作为模型的辅助描述。向仿真执行引擎完整的描述模型的结构和行为要素用于执行，参数要素用于产生定量分析结果验证既定的需求要素，从而完成对模型的验证。
+建立模型的仿真实验执行需要依靠于详细的模块定义图和活动图绘制，还可建立参数图作为模型的辅助描述。向仿真执行引擎完整的描述模型的结构和行为要素用于执行，参数要素用于产生定量分析结果验证既定的需求要素，从而完成对模型的验证。Papyrus插件在调色板工具中提供了大量的原件用于模型定制，下文简单介绍活动图中常用的的各原件的作用和使用。
 
-Papyrus插件在调色板工具中提供了大量的原件用于模型定制，下文简单介绍活动图中常用的的各原件的作用和使用。活动图的调色板主要分为节点与边两类，边中有控制流、对象流、关联和异常处理四种边元素，其中控制流和对象流较为常用。结点主要分为发送及呼叫节点、对象操作节点、特征结构节点和变量节点等几类节点。
+活动图的调色板主要分为节点与边两类，边中有控制流、对象流、关联和异常处理四种边元素，其中控制流和对象流较为常用。结点主要分为发送及呼叫节点、对象操作节点、特征结构节点和变量节点等几类节点。
 
-对象流Object Flow表示一个事件、能量或者数据的实例通过活动，因此必须确保对象流两端的对象节点拥有兼容的类型。一个对象流具有可见性Visibility、负载Weight和转换监视Guards参数设置，负载指同一时间可通过对象流的对象，转换监视用于判断边界两端是否可转换。
+对象流Object Flow表示一个事件、能量或者数据的实例通过活动，因此必须确保对象流两端的对象节点拥有兼容的类型。一个对象流具有可见性Visibility、负载Weight和转换监视Guards属性设置，负载指同一时间可通过对象流的对象，转换监视用于判断边界两端是否可转换。
 
-控制流Control Flow表示一种传递控制令牌的边，当活动中对象流无法传达活动节点时，可以使用控制流来启动一系列动作。控制流同样拥有可见性Visibility、负载Weight和转换监视Guards参数设置，但负载通常设置为0。
+控制流Control Flow表示一种传递控制令牌的边，当活动中对象流无法传达活动节点时，可以使用控制流来启动一系列动作。控制流同样拥有可见性Visibility、负载Weight和转换监视Guards属性设置，但负载通常设置为0。
 
 边元素在调色板中表示如下：
 
-![Palette边元素](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Palette%E8%BE%B9%E5%85%83%E7%B4%A0.png)
+![Palette边元素](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Palette%20edge%20element.png)
 
-呼叫节点具有行为呼叫节点Call Behavior和操作呼叫节点Call Operation Action两种可供选择。行为呼叫节点具有端口On Port、操作Operation和目标Target，目标为对象流对象输入，操作为输入对象需要执行的类方法，如类方法与另一活动图关联则切换为另一图执行；操作呼叫结点具有行为Behavior、端口On Port和参数内容Argument，行为可配置为类方法，也可调用工厂模型的库方法，参数内容指行为执行需要的几个输入参数。
+呼叫节点具有行为呼叫节点Call Behavior和操作呼叫节点Call Operation Action两种可供选择。行为呼叫节点具有端口On Port、操作Operation和目标Target的属性，目标为对象流对象输入，操作为输入对象需要执行的类方法，如类方法与另一活动图关联则切换为另一图执行；操作呼叫结点具有行为Behavior、端口On Port和参数内容Argument的属性，行为可配置为类方法，也可调用工厂模型的库方法，参数内容指行为执行需要的几个输入参数。
 
-发送节点具有发送对象节点Send Object Action和发送信号节点Send Signal Action两类。发送对象节点具有端口On Port、要求Request和目标Target，要求参数作为触发对象发送的条件，目标参数为输入栓获取的对象流对象；发送信号节点需要配置端口On Port、信号Signal、参数内容Argument和目标Target。
+发送节点具有发送对象节点Send Object Action和发送信号节点Send Signal Action两类。发送对象节点具有端口On Port、要求Request和目标Target等属性，要求参数作为触发对象发送的条件，目标参数为输入栓获取的对象流对象；发送信号节点需要配置端口On Port、信号Signal、参数内容Argument和目标Target等属性。
 
-类对象相关节点包括创建对象节点Create Object、销毁对象节点Destroy Object Action、对象自读取活动节点ReadSelfAction、转换类Reclassify和判断类Read Is Classified结点。对象自读取节点不需要输入，其附加栓pin上的对象流输出即为当前活动图中的类对象；创建对象节点具有实例Classifier和结果Result，对象流输出为未初始化的类对象；销毁对象节点仅有一个输入栓，对应属性为目标Target；转换类用于实现两种类之间的转化，可选择辅以前置和后置条件完成。
+类对象相关节点包括创建对象节点Create Object、销毁对象节点Destroy Object Action、对象自读取活动节点ReadSelfAction、转换类Reclassify和判断类Read Is Classified结点。对象自读取节点不需要输入，其附加栓pin上的对象流输出即为当前活动图中的类对象；创建对象节点具有实例Classifier和结果Result两种属性，对象流输出为未初始化的类对象；销毁对象节点仅有一个输入栓，对应属性为目标Target；转换类用于实现两种类之间的转化，可选择辅以前置和后置条件完成。
 
 特征结构相关有三种节点，分为特征结构读取节点Read Structual Feature、特征结构添加结点Add Structual Feature和特征结构清除节点Clear Structual Feature。特征结构添加节点具有对象Object、取值Value、结果Result和特征结构Structual Feature四种属性，输入栓从两路对象流中分别读取对象和值，然后将值赋予对象配置的特征结构参数中生成结果，再由输出结点置入到对象流中；特征结构读取节点不含有取值属性，其结果为对象配置的特征结构参数取值；特征结构清除节点其结果为特征结构未初始化的对象。
 
-变量相关有两种节点，即变量添加节点Add Variable Value Action、变量读取节点Read Variable Action和值说明节点Value Specification Action等。值说明节点具有结果和值两个属性，其附加栓直接将结果及其取值置入对象流；变量添加节点具有插值对象Insert at、变量Variable和取值Value参数，插值对象由输入栓从对象流中获取，然后可将变量和取值赋予对象；变量读取节点具有结果Result和变量Variable，结果即为变量的取值。
+变量相关有两种节点，即变量添加节点Add Variable Value Action、变量读取节点Read Variable Action和值说明节点Value Specification Action等。值说明节点具有结果和值两个属性，其附加栓直接将结果及其取值置入对象流；变量添加节点具有插值对象Insert at、变量Variable和取值Value等属性，插值对象由输入栓从对象流中获取，然后可将变量和取值赋予对象；变量读取节点具有结果Result和变量Variable等属性，结果即为变量的取值。
 
 常用活动节点有结构活动节点Structured Activity和不透明活动节点Oopaque Action。结构活动节点仅表示一个具有可见性配置的结构；不透明活动节点可设置编程语言Language属性。
 
@@ -578,11 +584,181 @@ Papyrus插件在调色板工具中提供了大量的原件用于模型定制，�
 
 节点元素在调色板中表示如下：
 
-![Palette节点元素](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Palette%E8%8A%82%E7%82%B9%E5%85%83%E7%B4%A0.png)
+![Palette节点元素](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Palette%20node%20element.png)
+
+
 
 #### SysML建模后的Java代码生成
 
+Java 代码生成插件主要由以下三部分组成：包含转换规则的org.eclipse.papyrus.designer.languages.java.codegen；从 UI 调用时的转换起始点 ：org.eclipse.papyrus.designer.languages.java.codegen.ui；用来支持 JDT 项目创建的微小插件：org.eclipse.papyrus.designer.languages.java.jdt.project。
+
+Papyrus支持为建立好的SysML模型中的指定类或者包生成代码，如图所示，代码的生成需要以下操作：在一个图表或者模型资源管理器中右键点击一个类或者包，选择Designer > Generate Java code，接下来会弹出一个新建JDT 项目的对话框，确认信息后一个新的java项目会被生成。
+
+![java代码生成](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/java%20code%20generation.png)
+
+当使一个类生成的代码时，与其具有相关关系的类也会被生成。这些关系包括依赖关系、 继承关系和泛化关系等。所生成代码的包，其中的所有类和与它们关联的类都将会生成。例如IncrementalComp项目中由Increment块生成的java代码如下：
+
+```java
+// --------------------------------------------------------
+// Code generated by Papyrus Java
+// --------------------------------------------------------
+
+package Incremental.IncrementalCompute;
+
+/************************************************************/
+
+public class Increment {
+	private int counter;
+	public void increment() {
+	}
+	/**
+	 * 
+	 * @return 
+	 */
+	public Increment() {
+	}
+};
+```
+
+由于绘制的SysML模块定义图中，Increment块只给出了一个整形计数参数和一个用于实现自增的方法，因此在java代码中只存在counter，increment()和构造函数三部分，而函数体的具体内容需要后续补充。
+
+而对于CarStatistics项目中具有组合关联的CruisingSystem类，其生成的类声明如下：
+
+```java
+// --------------------------------------------------------
+// Code generated by Papyrus Java
+// --------------------------------------------------------
+
+package CarStatistics;
+
+/************************************************************/
+
+public class CruisingSystem {
+  
+	public class OperateModule {
+		public int CruisingRequest;
+		public int SpeedSet;
+		public int GiveSpeedSet;
+      
+		public void EnableCru() {
+		}
+		public void DisableCru() {
+		}
+		public void SpeedPress() {
+		}
+		public void SpeedSetGet() {
+		}
+
+		public OperateModule() {
+		}
+	};
+
+	public class ControlModule {
+		public int SpeedValue;
+		public float CollisionTime;
+		public float RiskValue;
+		public int CollisionState;
+
+		public void StartCru() {
+		}
+		public void StopCru() {
+		}
+		public void CruSpeedDeal() {
+		}
+		public void CollisionTime() {
+		}
+		public void CollisionRisk() {
+		}
+	};
+
+	public class WarningModule {
+		public int WarningState;
+		public boolean RedLight;
+		public int CollisionState;
+      
+		public void StartCruPrompt() {
+		}
+		public void StopCruPrompt() {
+		}
+		public void AlertState() {
+		}
+		public void LightState() {
+		}
+	};
+
+	public class Sensors {
+		public void GetPreDist() {
+		}
+		public void GetCarSpeed() {
+		}
+		public void GetThrottleSignal() {
+		}
+		public void GetPedalSignal() {
+		}
+		public void GetButtonSignal() {
+		}
+	};
+
+  	public Sensors sensors_1;
+	public WarningModule warningmodule_1;
+	public ControlModule controlmodule_1;
+	public OperateModule operatemodule_1;
+	/**
+	 * 
+	 * @return 
+	 */
+	public CruisingSystem() {
+	}
+};
+```
+
+可见，由Papyrus生成的java代码只是简单地根据模块定义图中类的结构特性而生成的类的框架，代码的生成主要是参考结构图中类的静态视图来构建的，其并没有参考行为图中类的动态特征，因而也没有给出函数体。其主要参照的模块定义图属性如下：块的可见性Visibility、抽象特性abstract、拥有属性Owned attribute、操作Owned operation和关联关系Association；属性的派生特性derived、静态特性static、可见性Visibility、数据类型Type和多重性Mutiplicity等；操作的静态特性static、抽象特性abstract、可见性Visibility和参数Owned parameter等。类中这些属性决定了其所生成的java代码框架。因此，由SysMLBDD图到类的java代码框架转换，使其适合于建立具有复杂关系的工程模块，模块内部属性以及模块间关系的准确表达有助于java代码的正确生成，因而减少工作量。
+
+
+
 #### SysML建模的Java逆向工程
+
+IncrementalComp项目中用于实现Increment块对应功能的java代码如下：
+
+```java
+package Incremental.test;
+
+class Increment {
+	private int counter;
+	public void increment() {
+		this.counter=this.counter+1;
+	}
+
+	public Increment() {
+		this.counter=0;
+	}
+};
+
+public class IncreTest{
+	public static void main(String args[]) {
+		Increment ins=new Increment();
+	    for(int i=0;i<100;i++) ins.increment();
+	}
+}
+```
+
+避免无限循环，此处循环次数设定为100。
+
+实现Java文件或包逆向生成Papyrus模块定义图，有如下两种方式：
+
+1) 方法一：命令行
+创建一个Papyrus项目，创建并打开一个Papyrus class diagram；选中一个Java类或包；单击Papyrus class diagram右上角的Reverse按钮；此时，在左侧的Model Explorer中将出现被选中的Java类或包的SysML classes；将Model Explorer中的SysML classes加入到Block Difinition diagram即可。
+
+2) 方法二：直接将Java类或包拖入
+创建一个Papyrus项目，创建并打开一个SysML Block Difinition diagram文件；在左侧的Pacakge Explorer中，直接将一个Java类或包拖入Block Difinition diagram文件中并释放，此时将弹出设置对话框；设置对话框中的各项参数，即可生成对应的类图；为了避免每次在弹出的对话框中做大量设置，可以在Eclipse->Preferences->Papyrus->Java Code Reverse设置默认参数。
+
+一个java类及其所有关联的类都会被逆向生成添加到模型，默认情况下进行反向工程会创建名为"generated"包，也可以选择在选项菜单上的另一个包名称。
+
+Increment类的java代码经逆向生成后的模块定义图如下：
+
+![逆向工程生成](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/images_chap2/Reverse%20engineering%20generated.png)
+
+生成的类块并没有引入参数和方法，需要手动拖拽置入；对于具有较复杂关联关系的类，Papyrus也只是将各类及其属性放入到Model Explorer，类之间的关系也需要单独建立。
 
 
 
