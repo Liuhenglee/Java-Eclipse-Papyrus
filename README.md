@@ -8,22 +8,24 @@
 
 ### 项目内容
 
-工程的文档主要包括Papyrus SysML Explore系统建模语言探究、Species Competition Model种群竞争问题建模和Reference主要参考文献组成。系统建模语言探究文档的依赖文件有各章节引用的图片、可执行代码和示例系统模型；种群竞争问题的文件中包括可执行Java代码及其仿真模型。
+工程的文档主要包括Papyrus SysML Explore系统建模语言探究、Species Competition Model种群竞争问题建模、Reference主要参考文献和Tutorial建模教程组成。系统建模语言探究文档的依赖文件有各章节引用的图片、可执行代码和示例系统模型；种群竞争问题的文件中包括可执行Java代码及其仿真模型。
 
-```json
+```java
 Java-Eclipse-Papyrus/
-├── Papyrus SysML Explore.md
+├── Papyrus SysML Explore/
 │   ├── Images-Chap1
 │   ├── Images-Chap2
+│   ├── Caculator test-DecisionNode Test
 │   ├── CarStatistics-Examples Model
 │   ├── BasicActive-Executable UML
 │   ├── IncrementalClass-Executable SysML
 │   └── Incremental-Reverse Engineering
-├── Species Competition Model.md
+├── Species Competition Model/
 │   ├── SpeciesRelation-Executable Java
 │   ├── SpeciesCompetition-Executable SysML
 │   └── Images-Model
-└── Reference
+├── Reference
+└── Tutorial
 ```
 
 
@@ -53,3 +55,12 @@ Java-Eclipse-Papyrus/
 [Papyrus SysML Explore.md](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/Papyrus%20SysML%20Explore.md)
 
 License:Copyright @LiuHenglee. Released under AOSSCI.
+
+
+
+### 相关链接
+
+一直在在更新的Papyrus视频教程[[Papyrus Youtube channel](https://www.youtube.com/playlist?list=PL9nkS1KDTMm7XBenuBonLyAch1xFXiiuw)]，建议观看
+
+Papyrus源代码位于Eclipse Git代码仓库,参见[链接](https://git.eclipse.org/c/?q=papyrus)，有需要可以进行下载
+

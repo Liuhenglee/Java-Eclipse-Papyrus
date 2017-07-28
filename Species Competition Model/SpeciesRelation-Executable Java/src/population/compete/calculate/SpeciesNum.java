@@ -39,27 +39,26 @@ public class SpeciesNum {
 		System.out.print("Input the target year:");
 		Scanner input=new Scanner(System.in);
 		int maxCirculation=input.nextInt();
-		input.close();
+		input.nextLine();
 		
 		double a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
-		System.out.print("Input the initialization parameters:");
-		Scanner parasin=new Scanner(System.in);
-		parasin.useDelimiter(",");
-		a=parasin.nextDouble();
-		b=parasin.nextDouble();
-		c=parasin.nextDouble();
-		d=parasin.nextDouble();
-		e=parasin.nextDouble();
-		f=parasin.nextDouble();
-		g=parasin.nextDouble();
-		h=parasin.nextDouble();
-		parasin.close();
+		System.out.println("Input the initialization parameters:");
+		System.out.print("[ iniAnum=\t");a=input.nextDouble();
+		System.out.print("  iniBnum=\t");b=input.nextDouble();
+		System.out.print("  maxAnum=\t");c=input.nextDouble();
+		System.out.print("  maxBnum=\t");d=input.nextDouble();
+		System.out.print("  AgrowthRate=\t");e=input.nextDouble();
+		System.out.print("  BgrowthRate=\t");f=input.nextDouble();
+		System.out.print("  AeffectRate=\t");g=input.nextDouble();
+		System.out.print("  BeffectRate=\t");h=input.nextDouble();
+		System.out.println("]");input.close();
 		
 		Correlation Caculate=new Correlation(a,b,c,d,e,f,g,h);
 		for(int i=0;i<maxCirculation;i++){
 			Caculate.NextAnum();
 			Caculate.NextBnum();
-			System.out.print("A:B is "+Caculate.iniAnum+"         :        "+Caculate.iniBnum);
 		}
+		System.out.print("A:B is "+Caculate.iniAnum+" : "+Caculate.iniBnum);
 	}
 }
+
