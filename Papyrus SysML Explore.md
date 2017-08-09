@@ -1091,9 +1091,19 @@ SysML的完备子集解决了SysML模型缺乏统一上下文环境的问题，�
 
 Moka是一种用于执行UML模型的Pyparus模块，它本身包括了一个符合OMG标准的基础UML(fUML)和UML组合结构精确语义(PSCS)的执行引擎,这些标准处理UML的执行语义。Moka与Eclipse调试框架集成在一起，提供了控制、观察和动画设备的执行。Moka可以很容易地扩展，以支持可选的执行语义，因此可以适应多个使用场景和域。在Papyrus中SysML模块定义图是在UML类图的基础之上添加和删减部分模型元素扩展形成的，SysML活动图直接复用了UML的活动图，Moka能够实现对SysML语义的理解，因而同样能够进行仿真。
 
+##### (1) J2EE对UML的扩充
+
+PIM和PSM都是用UML语言描述的，但UML并没有针对某个特定的平台，所以在进行基于J2EE平台的开发时，必须对UML进行扩充。这些扩充的内容通常称为UML扩展机制(UML Profile)，UML Profile是UML的标准扩展方法，使用Stereotype(构造型)、TaggedValue(标记值)和Constraint(约束)三种扩展机制。
+
+UML Profile配置文件也用MOF元对象机制来描述，一个UML Stereotype构造型是MOF中一个metaclass元类的子类，它把元类metaclass的实例进行了分类，扩充出了新的UML TaggedValue标记值和UML Constraint约束。
+
+UML 支持大量的构造型 ，它们是对UML模型元素进行逻辑上的扩展或改变意义和显示方式，或者修改特征和语法。不同的模型元素具有与它们关联的不同标准构造型。UML标记值是元类的一个属性，用于描述元类的某些信息，一个UML构造型通常有一组UML标记值。UML约束是OCL描述的语义信息，它可以用在所有的模型元素上。
+
+构造型是一种优秀的扩展机制，它把UML中已经定义元素的语义专有化。并且能够有效地防止UML变得过于复杂。构造型扩展机制不是给模型元素增加新的属性或约束，而是在原有模型元素的基础上增加新的语义或限制。构造型在原来模型元素的基础上添加了新的内容，但并没有更改模型元素的结构。
 
 
-##### (1) 可执行UML
+
+##### (2) 可执行UML
 
 一个可执行的UML模型是一个具有足够详细的行为规范的模型，它可以有效地作为一个程序运行，用于测试和验证模型，并且独立于将要部署的系统的一个或多个实现平台。或者在某些情况下，模型本身在给定一个适当的执行环境时实际上也可以作为生产实现运行。
 
@@ -1105,7 +1115,7 @@ xUML建模要素主要有包图、用例图、类图、协作图、状态图和�
 
 
 
-##### (2) fUML和Alf
+##### (3) fUML和Alf
 
 foundational UML意为基本UML，受到了可执行UML的影响，它于2011年发布，为包含大多数面向对象和活动建模的UML子集提供了第一个精确的操作和基本语义。Action Language For Foundational UML意为基础UML动作语言，是对象管理组织提出的一种新的标准动作语言，是fUML的表面文本符号。
 
@@ -1128,15 +1138,13 @@ activity multiply(in x:Integer;in y:Integer):Integer{
 
 ![Alf映射关系](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/Papyrus%20SysML%20Explore/images_chap3/File%20Alf%20Mapping.png)
 
-
-
-##### (3) PSCS复合结构精确语义
-
-Precise Semantics of UML Composite Structures
+PSCS复合结构精确语义与可执行UML的相关理论参照Tutorial文件中的参考文献。
 
 
 
 ##### (4) Moka工作流程
+
+
 
 
 

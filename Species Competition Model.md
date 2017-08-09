@@ -116,10 +116,103 @@ $$
 
 在云南省腾冲县秃杉人工林中，充分考虑不同龄级、不同立地条件，选取秃杉林典型地段设置标准地。标准地为矩形，面积为600(30m*20m)，对标准地内胸径≥3.0cm的所有乔木树种进行每木检尺。记录树种名，测量其胸径、树高、枝下高、冠幅。
 
-现人工林中有秃杉和华山松两个树种，已知一标准地块能够容纳90棵秃杉或60棵华山松，自然条件下秃杉的种群增长率为0.6、华山松的自然增长率为0.75，秃杉对华山松的抑制因素为0.8、华山松对秃杉的抑制因素为1.2。第一年在一地块中种植5棵秃杉树苗4棵华山松树苗，请记录两种种群的数量，预计在第五年时对人工林进行干预以保证秃杉树苗能够在第15年占比达到60%，请问第五年需要采取的措施是什么。
+现人工林中有秃杉和华山松两个树种，已知一标准地块能够容纳90棵秃杉或60棵华山松，自然条件下秃杉的种群增长率为0.6、华山松的自然增长率为0.8，秃杉对华山松的抑制因素为0.8、华山松对秃杉的抑制因素为1.2。第一年在一地块中种植5棵秃杉树苗4棵华山松树苗，请记录两种种群的数量，预计在第五年时对人工林进行干预以保证秃杉树苗能够在第15年占比达到60%，请问第五年需要采取的措施是什么。
 
-通过建立的微分方程数学模型，定义物种相关关系Correlation类，其对其中一个物种A的主要参数有当前物种数量iniAnum、 最大容纳量maxAnum 自然增长率AgrowthRate和竞争抑制因素AeffectRate，另一物种以B代替；类方法主要有ValueGive赋值操作、物种数量计算NextAnum和NextBnum操作。
+通过建立的微分方程数学模型，定义物种相关关系SpeciesCompete类，其对其中一个物种A的主要参数有当前物种数量iniAnum、 最大容纳量maxAnum 自然增长率AgrowthRate和竞争抑制因素AeffectRate，另一物种以B代替；类方法主要有ValueGive赋值操作、物种数量计算NextAnum和NextBnum操作。
 
+在包中建立SpeciesCompete类，添加记年单位ThisYear，其初值默认为0，其模块定义图如下：
+
+![SpeciesCompete类](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/Species%20Competition%20Model/Images-Model/SpeciesCompete%20Module%20definition.png)
+
+其中NextA()和NextB*()用于计算下一年的iniA和iniB数值，GetValue()用于给类赋初值。
+
+如图2，类的主活动图MainActivity如下，首先给类赋初值，左侧的八个变量可自定义数值，中间的MaxYear为需要执行的最大次数即目标年份，在决策节点到合并节点之间的右侧和下侧部分为循环体，右侧按顺序计算每年的种群数量，下册用于更新记年然后判断是否达到目标点。
+
+![MainActivity活动图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/Species%20Competition%20Model/Images-Model/Main%20activity%20diagram.png)
+
+如图3，GetValue方法在读取类实体和类参数值之后，依次将参数值赋给实体，ThisYear的默认值为0可在此处修改。
+
+![GetValue活动图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/Species%20Competition%20Model/Images-Model/GetValue%20activity%20diagram.png)
+
+
+
+如图4，NextA()的主要工作为计算出下一年的iniAnum数值，左侧读取类实体之后获取需要使用到的参数，中间经过一系列计算之后得出结果，最后将结果重新返还到类实体中，同理NextB()的工作也是在同样的结构下完成。
+
+![NextA活动图](http://phabricator.mbsecloud.com/source/JavaPapyrus/browse/master/Species%20Competition%20Model/Images-Model/NextA%20activity%20diagram.png)
+
+
+
+### 模型Java代码：
+
+建立Correlation物种关系类，类中的参数取消了year记年，改为在主函数中记录：
+
+```java
+package population.compete.calculate;
+import java.util.*;
+
+class Correlation{
+	public double iniAnum;
+	public double maxAnum;
+	public double AgrowthRate;
+	public double AeffectRate;
+	public double iniBnum;
+	public double maxBnum;
+	public double BgrowthRate;
+	public double BeffectRate;
+	
+	public void NextAnum(){
+		this.iniAnum=(1+this.AgrowthRate)*this.iniAnum-this.AgrowthRate*this.BeffectRate/
+				this.maxAnum*this.iniAnum*this.iniBnum-this.AgrowthRate/this.maxAnum*this.iniAnum*this.iniAnum;
+	}
+	
+	public void NextBnum(){
+		this.iniBnum=(1+this.BgrowthRate)*this.iniBnum-this.BgrowthRate*this.AeffectRate/
+				this.maxBnum*this.iniBnum*this.iniAnum-this.BgrowthRate/this.maxBnum*this.iniBnum*this.iniBnum;
+	}
+	
+	public Correlation(double a,double b,double c,double d,double e,double f,double g,double h){
+		this.iniAnum=a;
+		this.iniBnum=b;
+		this.maxAnum=c;
+		this.maxBnum=d;
+		this.AgrowthRate=e;
+		this.BgrowthRate=f;
+		this.AeffectRate=g;
+		this.BeffectRate=h;
+	}
+}
+
+public class SpeciesNum {
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		System.out.print("Input the target year:");
+		Scanner input=new Scanner(System.in);
+		int maxCirculation=input.nextInt();
+		input.nextLine();
+		
+		double a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
+		System.out.println("Input the initialization parameters:");
+		System.out.print("[ iniAnum=\t");a=input.nextDouble();
+		System.out.print("  iniBnum=\t");b=input.nextDouble();
+		System.out.print("  maxAnum=\t");c=input.nextDouble();
+		System.out.print("  maxBnum=\t");d=input.nextDouble();
+		System.out.print("  AgrowthRate=\t");e=input.nextDouble();
+		System.out.print("  BgrowthRate=\t");f=input.nextDouble();
+		System.out.print("  AeffectRate=\t");g=input.nextDouble();
+		System.out.print("  BeffectRate=\t");h=input.nextDouble();
+		System.out.println("]");input.close();
+		
+		Correlation Caculate=new Correlation(a,b,c,d,e,f,g,h);
+		for(int i=0;i<maxCirculation;i++){
+			Caculate.NextAnum();
+			Caculate.NextBnum();
+		}
+		System.out.print("A:B is "+Caculate.iniAnum+" : "+Caculate.iniBnum);
+	}
+}
+
+
+```
 
 
 
